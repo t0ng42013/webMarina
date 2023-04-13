@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap');
+
+:root {
+  --primary: rgb(255, 102, 159);
+  --secondary: rgba(76, 88, 140, 1);
+  --tertiary: #2f334c;
+  --ftncolor: #fafafa;
+  --fntsize: 06em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(255, 102, 159);
+  background: linear-gradient(
+    156deg,
+    rgba(255, 102, 159, 1) 50%,
+    rgba(76, 88, 140, 1) 50%
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--ftncolor);
+}
+/* ************************************************** */
+.container {
+  position: relative;
+  max-width: 850px;
+  max-height: 550px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tertiary);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+/* ************************************************** */
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+}
+
+.img__logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.header__list {
+  width: 100%;
+  margin: 10px;
+}
+
+.header__list ul {
+  display: flex;
+  justify-content: end;
+  margin-right: 15px;
+}
+
+.header__list ul li {
+  list-style: none;
+  margin: 15px;
+  padding: 5px 10px;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+.header__list ul li:hover {
+  background: #ffffff71;
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.header__list a{
+    list-style: none;
+    text-decoration: white;
+    color: white;
+}
+/* ************************************************** */
+
+main {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+max-width: 850px;
+  max-height: 550px;
+  width: 100%;
+  height: 100%;
+}
+
+.container__main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100%;
+ max-width: 850px;
+  height: 400px;
+  margin: 20px auto;
+  padding: 12px;
+}
+
+/* ************************************************** */
+
+.box__main {
+  width: 50%;
+  text-align: center;
+}
+.box__main h1 {
+  padding: 20px;
+}
+.btn_turno {
+  padding: 10px;
+  margin: 3em;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: var(--primary);
+  color: var(--ftncolor);
+}
+
+.btn_turno a {
+  text-decoration: none;
+  color: var(--ftncolor);
+  font-size: 1.7em;
+}
+
+.btn_turno:hover {
+  background: var(--secondary);
+  text-decoration: underline;
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+.img__main {
+  width: 50%;
+  height: 100%;
+  background: url(../imgs/imgDentist.png);
+  background-blend-mode: color;
+  background-position: 90%;
+}
+
+/* ************************************************** */
+.container__acerca {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  min-width: 100%;
+ max-width: 850px;
+  height: 400px;
+  margin: 20px auto;
+  padding: 12px;
+}
+
+.container__acerca h2 {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+
+}
+
+.container__acerca p {
+  padding: 32px 50px;
+  height: 90%;
+
+}
+
+/* ************************************************** */
+
+.container__servicios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px auto;
+  overflow-y: scroll;
+  height: 400px;
+  min-width: 100%;
+ max-width: 850px;
+}
+
+.container__servicios h2 {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+}
+
+.card {
+  width: 230px;
+  height: 300px;
+  padding: 10px;
+  border: solid white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.card div {
+  margin: auto;
+}
+
+.card img {
+  display: flex;
+  margin: auto;
+  width: 100px;
+  border-radius: 12px;
+}
+
+/* ************************************************** */
+
+.foot img {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  cursor: pointer;
+}
