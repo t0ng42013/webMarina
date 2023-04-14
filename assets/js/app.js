@@ -28,7 +28,8 @@ function iniciar() {
 
     _toggle.onclick = () => {
                 _items.classList.toggle("open");
-                _toggle.classList.toggle("close");
+        _toggle.classList.toggle("close");       
     }
+
 }
 window.onload = iniciar;
