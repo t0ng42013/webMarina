@@ -258,7 +258,6 @@ main {
 @media (max-width: 660px) {
     :root {
         --pantalla: 100vw;
-        overflow: hidden;
     }
   
     /* ************************************************** */
@@ -322,11 +321,14 @@ main {
     display: none;
 }
   
-.container, .container__main, .container__acerca{
-    height: calc(100vh - 80px);
+.container {
+    height: 100vh;
+    overflow: hidden;
+}
+.container__main, .container__acerca{
+    height:100vh;
     width: 100vw;
     box-shadow: none;
-    overflow: hidden;
 }
   
 .container__main {
@@ -348,7 +350,7 @@ main {
 .foot img {
     bottom: 20%;
 }
-}
+    }
 
 @media (max-width: 375px) {
 
