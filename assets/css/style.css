@@ -242,7 +242,7 @@ main {
     :root {
         --pantalla: 650px;
     }
-    
+
      .container{
 
    border-style: none;
@@ -378,5 +378,16 @@ main {
     .container__servicios, main{
         min-height: calc(100vh - 80px);
       
+    }
+}
+
+
+@media(max-height: 360px){
+    .container{
+        height: 100vh;
+    }
+
+    .btn_turno{
+        font-size: .5em;
     }
 }
