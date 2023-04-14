@@ -27,9 +27,16 @@ function iniciar() {
     });
 
     _toggle.onclick = () => {
-                _items.classList.toggle("open");
-        _toggle.classList.toggle("close");       
+        _items.classList.toggle("open");    
+        _toggle.classList.toggle("close");      
     }
+    
+    _container.onclick = () => {
+    if (_items.classList.contains("open")) {
+            _items.classList.toggle("open");    
+        _toggle.classList.toggle("close");       
+        }
+    } 
 
 }
 window.onload = iniciar;
