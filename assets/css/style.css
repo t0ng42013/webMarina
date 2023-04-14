@@ -323,7 +323,7 @@ main {
 }
   
 .container, .container__main, .container__acerca{
-    height: 100vh;
+    height: calc(100vh - 80px);
     width: 100vw;
     box-shadow: none;
     overflow: hidden;
