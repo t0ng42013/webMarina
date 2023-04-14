@@ -322,10 +322,11 @@ main {
     display: none;
 }
   
-.container, .container__main, .container__acerca, .container__servicios {
+.container, .container__main, .container__acerca{
     height: 100vh;
     width: 100vw;
     box-shadow: none;
+    overflow: hidden;
 }
   
 .container__main {
