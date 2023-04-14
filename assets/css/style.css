@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap");
 
 :root {
   --primary: rgb(255, 102, 159);
@@ -6,6 +6,8 @@
   --tertiary: #2f334c;
   --ftncolor: #fafafa;
   --fntsize: 06em;
+  --pantalla: 850px;
+  --pantallaY: 400px;
 }
 
 * {
@@ -31,7 +33,7 @@ body {
 /* ************************************************** */
 .container {
   position: relative;
-  max-width: 850px;
+  max-width: var(--pantalla);
   max-height: 550px;
   width: 100%;
   height: 100%;
@@ -51,15 +53,21 @@ header {
 .header__logo {
   display: flex;
   align-items: center;
-  width: 150px;
+  width: 22vw;
   height: 100%;
 }
 
 .img__logo {
+  background: #000;
   width: 50px;
   height: 50px;
+  min-width: 50px;
   border-radius: 50%;
-  margin: 20px;
+  margin: 0.5vw;
+}
+
+.header__logo h3 {
+  font-size: 1em;
 }
 
 .header__list {
@@ -75,7 +83,7 @@ header {
 
 .header__list ul li {
   list-style: none;
-  margin: 15px;
+  margin: 2%;
   padding: 5px 10px;
   border-radius: 22px;
   cursor: pointer;
@@ -87,21 +95,20 @@ header {
   transition: 1s;
 }
 
-.header__list a{
-    list-style: none;
-    text-decoration: white;
-    color: white;
+.header__list a {
+  list-style: none;
+  text-decoration: white;
+  color: white;
 }
 /* ************************************************** */
 
 main {
   display: flex;
   gap: 20px;
-  overflow-x: hidden;
-max-width: 850px;
-  max-height: 550px;
+  overflow: hidden;
+  max-width: var(--pantalla);
+  max-height: 70%;
   width: 100%;
-  height: 100%;
 }
 
 .container__main {
@@ -109,7 +116,7 @@ max-width: 850px;
   align-items: center;
   gap: 8px;
   min-width: 100%;
- max-width: 850px;
+  max-width: var(--pantalla);
   height: 400px;
   margin: 20px auto;
   padding: 12px;
@@ -157,13 +164,12 @@ max-width: 850px;
 
 /* ************************************************** */
 .container__acerca {
-  display: flex;
+  display: none;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
   min-width: 100%;
- max-width: 850px;
-  height: 400px;
+  max-width: var(--pantalla);
   margin: 20px auto;
   padding: 12px;
 }
@@ -173,19 +179,17 @@ max-width: 850px;
   text-align: center;
   padding: 20px;
   font-size: 2em;
-
 }
 
 .container__acerca p {
-  padding: 32px 50px;
+  padding: 0 50px;
   height: 90%;
-
 }
 
 /* ************************************************** */
 
 .container__servicios {
-  display: flex;
+  display: none;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
@@ -193,7 +197,7 @@ max-width: 850px;
   overflow-y: scroll;
   height: 400px;
   min-width: 100%;
- max-width: 850px;
+  max-width: var(--pantalla);
 }
 
 .container__servicios h2 {
@@ -232,4 +236,125 @@ max-width: 850px;
   right: 15px;
   bottom: 15px;
   cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  :root {
+    --pantalla: 650px;
+  }
+}
+
+@media (max-width: 660px) {
+  :root {
+    --pantalla: 100vw;
+    overflow: hidden;
+  }
+
+
+
+  /* ************************************************** */
+
+  .header__list {
+    position: absolute;
+    top: 60px;
+    
+  }
+
+  .header__list ul {
+    flex-direction: column;
+    align-items: center;
+    background-color: #2f334c;
+    transform: translateX(-100%);
+    transition: .3s;
+  }
+
+ .btn_turno a{
+font-size: 1.5em;
+ }
+
+  .header_toggle {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+
+  .header_toggle span {
+    width: 30px;
+    height: 4px;
+    background-color: #fafafa;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transform-origin: 5px 0px;
+    transition: .3s;
+  }
+
+  .close span {
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+
+  .close span:nth-child(2) {
+    display: none;
+  }
+
+  .open {
+    transform: translateX(0) !important;
+  }
+
+  .close span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px, 1px);
+  }
+
+  .img__main {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;   
+  }
+  .container {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .container__main{
+     background: url(../imgs/imgDentist.png);
+    background-position: 30%;   
+  }
+
+  .container__main h3{
+    font-size: 1em;
+  }
+
+   .btn_turno{
+    width: 200px;
+    margin: 50px  0;
+ }
+
+ .foot img{
+    bottom: 20%;
+ }
+}
+@media (min-width: 460px) {
+
+}
+@media (max-width: 375px) {
+        .btn_turno a{
+font-size: .9em;
+
+ }
+ .btn_turno{
+    width: 150px;
+ }
+
+ .foot img{
+    bottom: 10%;
+ }
+
+ .container__acerca{
+    overflow-y: scroll;
+ }
 }
