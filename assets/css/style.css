@@ -326,7 +326,7 @@ main {
     overflow: hidden;
 }
 .container__main, .container__acerca{
-    height:100vh;
+    height:80vh;
     width: 100vw;
     box-shadow: none;
 }
@@ -371,6 +371,7 @@ main {
     .container__acerca p{
         overflow-y: scroll;
         padding: 15px;
+        height: 100%;
     }
     .container__acerca h2{
         padding: 0;
