@@ -240,7 +240,7 @@ main {
 }
 
     /* ************************************************** */
-    
+
 @media (max-width: 860px) {
     :root {
         --pantalla: 650px;
@@ -274,6 +274,11 @@ main {
         background-color: #2f334c;
         transform: translateX(-100%);
         transition: 0.3s;
+    }
+
+    .header__list ul li:hover{
+        width: 100%;
+        text-align: center;
     }
   
     .btn_turno a {
@@ -350,6 +355,7 @@ main {
 }
 
 @media (max-width: 375px) {
+    
     .btn_turno a {
         font-size: 0.9em;
     }
@@ -367,5 +373,9 @@ main {
     }
     .container__acerca h2{
         padding: 0;
+    }
+    .container__servicios, main{
+        min-height: calc(100vh - 80px);
+      
     }
 }
