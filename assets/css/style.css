@@ -33,10 +33,9 @@ body {
 /* ************************************************** */
 .container {
   position: relative;
-  max-width: var(--pantalla);
-  max-height: 550px;
+  max-width: var(--pantalla); 
   width: 100%;
-  height: 100%;
+  height: 550px;
   background-color: var(--tertiary);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -245,9 +244,10 @@ main {
     :root {
         --pantalla: 650px;
     }
-    body{
-    min-height: 500px;
-}
+     .slider{
+   height: 90vh;
+   border-style: none;
+    }
 .container__acerca{
     overflow-y: scroll;
 }
@@ -267,7 +267,7 @@ main {
       position: absolute;
       top: 60px;
     }
-    
+  
     .header__list ul {
         flex-direction: column;
         align-items: center;
@@ -275,7 +275,7 @@ main {
         transform: translateX(-100%);
         transition: 0.3s;
     }
-
+  
     .header__list ul li:hover{
         width: 100%;
         text-align: center;
@@ -284,14 +284,14 @@ main {
     .btn_turno a {
         font-size: 1.5em;
     }
-    
+  
     .header_toggle {
         display: flex;
         flex-direction: column;
     margin-left: auto;
     margin-right: 15px;
 }
-
+  
 .header_toggle span {
     width: 30px;
     height: 4px;
@@ -301,61 +301,56 @@ main {
     transform-origin: 5px 0px;
     transition: 0.3s;
 }
-
-  .close span {
+  
+.close span {
     transform: rotate(45deg) translate(0px, 0px);
 }
-
+  
 .close span:nth-child(2) {
     display: none;
 }
-
-.open {
-    transform: translateX(0) !important;
-}
-
+  
 .close span:nth-child(3) {
     transform: rotate(-45deg) translate(-5px, 1px);
 }
-
+  
+.open {
+    transform: translateX(0) !important;
+}
+  
 .img__main {
     display: none;
 }
-
-main {
-    width: 100%;
-    height: 100%;
-}
-.container {
+  
+.container, .container__main, .container__acerca, .container__servicios {
     height: 100vh;
-    max-height: 100vh;
     width: 100vw;
-    max-width: 100vw;
+    box-shadow: none;
 }
-
+  
 .container__main {
     background: url(../imgs/imgDentist.png);
     background-repeat: no-repeat;
     background-position: 30%;
     height: calc(100vh - 60px);
 }
-
+  
 .container__main h3 {
     font-size: 1em;
 }
-
+  
 .btn_turno {
     width: 200px;
     margin: 50px 0;
 }
-
+  
 .foot img {
     bottom: 20%;
 }
 }
 
 @media (max-width: 375px) {
-    
+
     .btn_turno a {
         font-size: 0.9em;
     }
