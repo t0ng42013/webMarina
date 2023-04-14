@@ -342,6 +342,9 @@ main {
     font-size: 1em;
 }
   
+.container__acerca p{
+    height: 100%;
+}
 .btn_turno {
     width: 200px;
     margin: 50px 0;
